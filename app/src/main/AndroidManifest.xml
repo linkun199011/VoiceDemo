@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".TtsDemo">
         </activity>
+        <activity android:name=".IatDemo">
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />

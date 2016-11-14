@@ -18,8 +18,9 @@ public class MainActivity extends Activity {
         mContext = this;
         setContentView(R.layout.main);
         Button btn1 = (Button) findViewById(R.id.btn1);
+        Button btn2 = (Button) findViewById(R.id.btn2);
 
-        if (btn1 == null) {
+        if (btn1 == null || btn2 == null) {
             return;
         }
 
@@ -28,6 +29,15 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setClass(mContext, TtsDemo.class);
+                startActivity(intent);
+            }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(mContext, IatDemo.class);
                 startActivity(intent);
             }
         });
